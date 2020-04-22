@@ -6,4 +6,8 @@
 //  Copyright © 2020 Raden. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class NoteViewController: UIViewController {
+    
+}
