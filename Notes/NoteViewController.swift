@@ -9,5 +9,14 @@
 import UIKit
 
 class NoteViewController: UIViewController {
+    var note: Note!
+    
+    @IBOutlet var textView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.text = note.contents
+    }
+    
     
 }

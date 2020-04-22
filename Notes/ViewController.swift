@@ -39,5 +39,12 @@ class ViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NoteSegue" {
+            if let destination = segue.destination as? NoteViewController {
+                destination.note = notes[tableView.indexPathForSelectedRow!.row]
+            }
+        }
+    }
 }
 
