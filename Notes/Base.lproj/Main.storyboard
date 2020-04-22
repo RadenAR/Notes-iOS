@@ -61,14 +61,29 @@
                     <view key="view" contentMode="scaleToFill" id="wRC-VX-jmT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FaE-N0-LsZ">
+                                <rect key="frame" x="0.0" y="88" width="429" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FaE-N0-LsZ" firstAttribute="top" secondItem="FQm-3V-Oex" secondAttribute="top" id="1SM-xh-m09"/>
+                            <constraint firstItem="FQm-3V-Oex" firstAttribute="trailing" secondItem="FaE-N0-LsZ" secondAttribute="trailing" constant="20" id="HO4-4a-gs6"/>
+                            <constraint firstItem="FaE-N0-LsZ" firstAttribute="leading" secondItem="FQm-3V-Oex" secondAttribute="leading" constant="20" id="HVL-8R-G1M"/>
+                            <constraint firstItem="FaE-N0-LsZ" firstAttribute="bottom" secondItem="FQm-3V-Oex" secondAttribute="bottom" id="nxK-C2-BF6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FQm-3V-Oex"/>
                     </view>
                     <navigationItem key="navigationItem" id="B6F-Kk-r3S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXm-kQ-3M5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="291"/>
+            <point key="canvasLocation" x="320.28985507246381" y="290.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2N-cc-l1E">
