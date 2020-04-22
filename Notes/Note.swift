@@ -82,4 +82,12 @@ class NoteManager {
         sqlite3_finalize(statement)
         return result
     }
+    
+    func save(note: Note) {
+        connect()
+        var statement: OpaquePointer!
+        if sqlite3_prepare_v2(database, "UPDATE notes SET contents = ? WHERE rowid = ?", -1, , &statement, nil) != SQLITE_OK {
+            print("Error creating update stement")
+        }
+    }
 }
