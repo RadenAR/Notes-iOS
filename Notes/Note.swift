@@ -86,10 +86,11 @@ class NoteManager {
     func save(note: Note) {
         connect()
         var statement: OpaquePointer!
-        if sqlite3_prepare_v2(database, "UPDATE notes SET contents = ? WHERE rowid = ?", -1, , &statement, nil) != SQLITE_OK {
+        if sqlite3_prepare_v2(database, "UPDATE notes SET contents = ? WHERE rowid = ?", -1, &statement, nil) != SQLITE_OK {
             print("Error creating update stement")
         }
         
         sqlite3_bind_text(statement, 1, NSString(string: note.contents).utf8String, -1, nil)
+        sqlite3_bind_int(statement, 2, Int32(note.id))
     }
 }
