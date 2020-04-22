@@ -92,5 +92,11 @@ class NoteManager {
         
         sqlite3_bind_text(statement, 1, NSString(string: note.contents).utf8String, -1, nil)
         sqlite3_bind_int(statement, 2, Int32(note.id))
+        
+        if sqlite3_step(statement) != SQLITE_DONE {
+            print("Error running update")
+        }
+        
+        sqlite3_finalize(statement)
     }
 }
