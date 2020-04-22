@@ -9,7 +9,7 @@
         <!--Notes-->
         <scene sceneID="1yH-SH-kF4">
             <objects>
-                <tableViewController id="wxo-HR-wMm" sceneMemberID="viewController">
+                <tableViewController id="wxo-HR-wMm" customClass="ViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x9i-h4-sci">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,13 @@
                             <outlet property="delegate" destination="wxo-HR-wMm" id="aje-w7-Kf0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notes" id="y4K-nu-mjV"/>
+                    <navigationItem key="navigationItem" title="Notes" id="y4K-nu-mjV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zsB-hZ-CbO">
+                            <connections>
+                                <action selector="createNote" destination="wxo-HR-wMm" id="Sqi-ph-42Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWz-4D-MwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

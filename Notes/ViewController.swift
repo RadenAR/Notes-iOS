@@ -10,10 +10,9 @@ import UIKit
 
 class ViewController: UITableViewController {
     var notes: [Note] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBAction func createNote() {
+        let _ = NoteManager.main.create()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,6 +27,11 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
         cell.textLabel?.text = notes[indexPath.row].contents
         return cell
+    }
+    
+    func reload() {
+        notes = NoteManager.main.getAllNotes()
+        self.tableView.reloadData()
     }
 
 }

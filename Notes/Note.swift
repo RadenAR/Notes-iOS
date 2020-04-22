@@ -16,6 +16,13 @@ struct Note {
 
 class NoteManager {
     var database: OpaquePointer!
+    
+    static let main = NoteManager()
+    
+    private init() {
+        
+    }
+    
     func connect() {
         if database != nil {
             return
