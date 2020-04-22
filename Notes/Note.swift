@@ -89,5 +89,7 @@ class NoteManager {
         if sqlite3_prepare_v2(database, "UPDATE notes SET contents = ? WHERE rowid = ?", -1, , &statement, nil) != SQLITE_OK {
             print("Error creating update stement")
         }
+        
+        sqlite3_bind_text(statement, 1, NSString(string: note.contents).utf8String, -1, nil)
     }
 }
