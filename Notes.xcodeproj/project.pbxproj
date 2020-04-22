@@ -14,6 +14,7 @@
 		CF2B9EB9244F443F00F333FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2B9EB8244F443F00F333FC /* Assets.xcassets */; };
 		CF2B9EBC244F443F00F333FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2B9EBA244F443F00F333FC /* LaunchScreen.storyboard */; };
 		CF2B9EC4244F46BE00F333FC /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2B9EC3244F46BE00F333FC /* Note.swift */; };
+		CF3E836224507665008FBA19 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E836124507665008FBA19 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CF2B9EBB244F443F00F333FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2B9EBD244F443F00F333FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF2B9EC3244F46BE00F333FC /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CF3E836124507665008FBA19 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CF2B9EBA244F443F00F333FC /* LaunchScreen.storyboard */,
 				CF2B9EBD244F443F00F333FC /* Info.plist */,
 				CF2B9EC3244F46BE00F333FC /* Note.swift */,
+				CF3E836124507665008FBA19 /* NoteViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				CF2B9EB4244F443D00F333FC /* ViewController.swift in Sources */,
 				CF2B9EB0244F443D00F333FC /* AppDelegate.swift in Sources */,
 				CF2B9EB2244F443D00F333FC /* SceneDelegate.swift in Sources */,
+				CF3E836224507665008FBA19 /* NoteViewController.swift in Sources */,
 				CF2B9EC4244F46BE00F333FC /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
