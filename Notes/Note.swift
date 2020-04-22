@@ -61,6 +61,7 @@ class NoteManager {
     
     func getAllNotes() -> [Note] {
         connect()
+        var result: [Note] = []
         
         var statement: OpaquePointer!
         if sqlite3_prepare_v2(database, "SELECT rowid, contents FROM notes", -1, &statement, nil) != SQLITE_OK {
@@ -68,6 +69,10 @@ class NoteManager {
             return []
         }
         
-        
+        while sqlite3_step(statement) == SQLITE_ROW {
+            result.append(Note(id: Int(sqlite3_column_int(statement, 0)), contents: String(cString: sqlite3_column_text(statement, 1))))
+        }
+        sqlite3_finalize(statement)
+        return result
     }
 }
