@@ -15,6 +15,11 @@ class ViewController: UITableViewController {
         let _ = NoteManager.main.create()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        reload()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
