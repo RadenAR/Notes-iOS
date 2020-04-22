@@ -52,7 +52,7 @@ class NoteManager {
         connect()
         
         var statement: OpaquePointer!
-        if sqlite3_prepare_v2(database, "INSERT INTO notes (content) VALUES ('New note')", -1, &statement, nil) != SQLITE_OK {
+        if sqlite3_prepare_v2(database, "INSERT INTO notes (contents) VALUES ('New note')", -1, &statement, nil) != SQLITE_OK {
             print("Could not create query")
             return -1
         }
